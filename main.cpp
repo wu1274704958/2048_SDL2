@@ -161,12 +161,17 @@ int toBig_toSmall(void *data)
 	return 0;
 }
 
+
+//std::vector<SDL_Thread*> threads;
+
 void createThread_toBig(int i)
 {
 	SDL_Thread* thread = SDL_CreateThread(toBig, "toBig", (void *)i);
 	if (thread)
 	{
 		std::cout << thread << std::endl;
+		//threads.push_back(thread);
+		SDL_DetachThread(thread);
 	}
 }
 
@@ -176,6 +181,8 @@ void createThread_toBig_toSmall(int i)
 	if (thread)
 	{
 		std::cout << thread << std::endl;
+		//threads.push_back(thread);
+		SDL_DetachThread(thread);
 	}
 }
 

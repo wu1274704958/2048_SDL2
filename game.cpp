@@ -72,7 +72,7 @@ const int&& get_score(const int&& s)
 }
 
 #define DRAW_SLEEP \
-		if(change){draw(); Sleep(10);}
+		if(change){draw(); /*Sleep(10);*/}
 
 
 		
