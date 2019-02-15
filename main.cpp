@@ -224,22 +224,22 @@ int init()
 
 	mutex = ::SDL_CreateMutex();
 
-	SDL_Surface *temp = SDL_LoadBMP("img/yuan_jiao_box.bmp");
+	SDL_Surface *temp = SDL_LoadBMP("../../img/yuan_jiao_box.bmp");
 	SDL_SetColorKey(temp, SDL_TRUE, SDL_MapRGB(temp->format, 0, 0, 0));
 	yuan_jiao_box = SDL_CreateTextureFromSurface(renderer,temp);
 	SDL_FreeSurface(temp);
 
-	temp = SDL_LoadBMP("img/bg2.bmp");
+	temp = SDL_LoadBMP("../../img/bg2.bmp");
 	bg = SDL_CreateTextureFromSurface(renderer, temp);
 	SDL_FreeSurface(temp);
 
-	temp = SDL_LoadBMP("img/fg_box.bmp");
+	temp = SDL_LoadBMP("../../img/fg_box.bmp");
 	SDL_SetColorKey(temp, SDL_TRUE, SDL_MapRGB(temp->format, 255, 0, 0));
 	fg_box = SDL_CreateTextureFromSurface(renderer, temp);
 	SDL_FreeSurface(temp);
 	
 	TTF_Init();
-	font = TTF_OpenFont("C:\\WINDOWS\\Fonts\\SIMHEI.TTF", 140);
+	font = TTF_OpenFont("../../img/simhei.ttf", 140);
 
 	char str[5] = {0};
 	int color_g = 220;

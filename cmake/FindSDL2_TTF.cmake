@@ -9,8 +9,8 @@ if(WIN32)
         message("Find SDL2_TTF_PATH env!")
         message(${SDL2_TTF_PATH})
 
-        find_path( SDL2_TTF_INCLUDE_DIR SDL_ttf.h "${SDL2_TTF_PATH}/include" )
-        find_library( SDL2_TTF_LIBRARY SDL2_ttf.lib "${SDL2_TTF_PATH}/lib" "${SDL2_TTF_PATH}/lib/x64")
+        find_path( SDL2_TTF_INCLUDE_DIR SDL_ttf.h "${SDL2_TTF_PATH}/include" "${SDL2_TTF_PATH}" )
+        find_library( SDL2_TTF_LIBRARY SDL2_ttf.lib "${SDL2_TTF_PATH}/lib" "${SDL2_TTF_PATH}/lib/x64" "${SDL2_TTF_PATH}/Release" )
 
         if( SDL2_TTF_INCLUDE_DIR AND SDL2_TTF_LIBRARY )
 
